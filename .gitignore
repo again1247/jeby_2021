@@ -198,4 +198,14 @@ Temporary Items
 # Support for Project snippet scope
 !.vscode/*.code-snippets
 
+# Django secret file
+secrets.json
+
+#로컬에서는 static 디렉토리, templates 디렉토리를 만들 예정임.. 근데 static 파일을 만들고 파일을 넣은걸..?
+#mysite/static/
+
+
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,django
+
+docker run -d --name jeby-2021-postgres -p 5432:5432 -e POSTGRES_PASSWORD=django12$ -e PGDATA=/var/lib/postgresql/data/pgdata -v jeby-2021-postgres:/var/lib/postgresql/data postgres:13.3
