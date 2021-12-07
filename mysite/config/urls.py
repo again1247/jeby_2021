@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from news import views as views_news  # news app 하위에 views를 Import.
+
+## 장고 프로젝트에서 url 해석을 위해 가장 최초로 접근하는 모듈. (urls.py)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("", views_news.index),
+    path("admin/", admin.site.urls),
+    path("common/", include("common.urls")),
+    path("news/", include("news.urls")),
 ]
