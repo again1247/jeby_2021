@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from news import views as views_news  # news app 하위에 views를 Import.
+from news.views import base_views as views_news  # news app 하위에 views를 Import.
 
 ## 장고 프로젝트에서 url 해석을 위해 가장 최초로 접근하는 모듈. (urls.py)
 
